@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description: Refactoriza el código seleccionado aplicando las reglas del proyecto
 ---
 

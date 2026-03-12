@@ -10,20 +10,23 @@ Aplicar en todo el código generado o modificado.
 
 ## General
 
-| Elemento           | Convención        | Ejemplo                        |
-|--------------------|-------------------|--------------------------------|
-| Variables          | `camelCase`       | `userEmail`, `totalPrice`      |
-| Constantes         | `UPPER_SNAKE_CASE`| `MAX_RETRIES`, `API_BASE_URL`  |
-| Funciones          | `camelCase`       | `getUserById`, `formatDate`    |
-| Clases             | `PascalCase`      | `UserService`, `PaymentGateway`|
-| Interfaces / Types | `PascalCase`      | `UserDto`, `ApiResponse`       |
-| Enums              | `PascalCase`      | `OrderStatus`, `UserRole`      |
-| Archivos           | `kebab-case`      | `user-service.ts`, `api-client.ts` |
-| Carpetas           | `kebab-case`      | `user-management/`, `api-clients/` |
+| Elemento           | Convención                         | Ejemplo                                     |
+|--------------------|-------------------------------------|---------------------------------------------|
+| Variables          | `camelCase`                        | `user`, `userId`                            |
+| Constantes         | `UPPER_SNAKE_CASE`                 | `MAX_RETRY_ATTEMPTS`, `API_BASE_URL`        |
+| Métodos            | `camelCase`                        | `getUserById`, `isActive`                   |
+| Clases             | `PascalCase`                       | `UserService`, `PaymentGateway`             |
+| Interfaces         | `PascalCase` precedido por `I`     | `IUserRepository`, `IOrderService`          |
+| Types              | `PascalCase`                       | `UserDto`, `ApiResponse`                    |
+| Enums (archivo)    | `kebab-case`                       | `order-status.enum.ts`                      |
+| Enums (valores)    | `UPPER_SNAKE_CASE`                 | `ORDER_PENDING`, `USER_ACTIVE`              |
+| Archivos           | `kebab-case`                       | `user-service.ts`, `user.controller.ts`     |
+| Carpetas           | `kebab-case`                       | `user-management/`                          |
 
 ## TypeScript / JavaScript
 
-- Usar **verbos** para funciones: `getUser`, `createOrder`, `deleteSession`.
+- Las variables deben ser **descriptivas**: preferir `userId` sobre `id`, `userEmail` sobre `email`.
+- Usar **verbos** para funciones y métodos: `getUser`, `createOrder`, `deleteSession`.
 - Los booleanos deben empezar con `is`, `has`, `can` o `should`: `isActive`, `hasPermission`.
 - Los arrays deben estar en plural: `users`, `orderItems`.
 - Los handlers de eventos llevan el prefijo `handle`: `handleClick`, `handleSubmit`.

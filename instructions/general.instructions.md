@@ -12,6 +12,16 @@ applyTo: "**"
 - Limitar la longitud de las funciones a un máximo de **40 líneas**.
 - Limitar la profundidad de anidamiento a **3 niveles** como máximo.
 
+## Funciones flecha y retorno implícito
+
+- Usar **funciones flecha** (`arrow functions`) en lugar de funciones tradicionales dentro de métodos de clases.
+  - **Excepción**: los métodos de primer nivel en controladores, servicios, DAOs y clases similares pueden definirse como métodos de clase normales.
+  - Correcto: `const suma = (a: number, b: number): number => a + b;`
+  - Incorrecto: `function suma(a: number, b: number): number { return a + b; }`
+- Usar **retorno implícito** en funciones flecha cuando el cuerpo es una sola expresión:
+  - Correcto: `const doble = (n: number): number => n * 2;`
+  - Incorrecto: `const doble = (n: number): number => { return n * 2; }`
+
 ## Manejo de errores
 
 - Nunca silenciar errores con bloques `catch` vacíos.
